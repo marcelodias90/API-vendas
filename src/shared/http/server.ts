@@ -18,15 +18,15 @@ app.use(
     if (error instanceof AppError) {
       return response.status(error.statusCode).json({
         status: 'error',
-        message: error.message,
+        message: error.message
       });
     }
 
     return response.status(500).json({
       status: 'error',
-      message: 'Internal server error',
+      message: 'Internal server error'
     });
-  },
+  }
 );
 
 app.listen(3333, () => {
