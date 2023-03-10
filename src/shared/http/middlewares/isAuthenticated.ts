@@ -4,7 +4,7 @@ import { verify } from 'jsonwebtoken';
 import authConfig from '@config/auth';
 
 //interface para pegar os dados do token
-interface TokenPayload {
+interface ITokenPayload {
   iate: number;
   exp: number;
   sub: string;
@@ -27,7 +27,7 @@ export default function isAuthenticated(
     //verificando com o verify do jwt, se o token foi criado com a msma secret
     const decodedToken = verify(token, authConfig.jwt.secret);
 
-    const { sub } = decodedToken as TokenPayload;
+    const { sub } = decodedToken as ITokenPayload;
 
     //usando @Override de tipagem
     request.user = {
