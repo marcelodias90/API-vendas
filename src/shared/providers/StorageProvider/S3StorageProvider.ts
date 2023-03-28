@@ -4,7 +4,7 @@ import aws, { S3 } from 'aws-sdk';
 import uploadConfig from '@config/upload';
 import mime from 'mime';
 
-export default class DiskStorageProvider {
+export default class S3StorageProvider {
   private client: S3;
 
   constructor() {

@@ -9,4 +9,3 @@ export default {
   },
   driver: 'redis'
 };
-//aula 113
